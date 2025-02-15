@@ -2,33 +2,28 @@ import React from "react";
 import { Box, Container, CardMedia, Typography } from "@mui/material";
 import { Images } from "../../assets/Images";
 import colors from "../../styles/colors";
-import { Link } from "react-router-dom";
 
 function Header() {
 	const Navigation = [
 		{
-			path: "/",
+			path: "#home",
 			label: "Home",
 		},
 		{
-			path: "/about-me",
-			label: "About Me",
+			path: "#skills",
+			label: "Skills",
 		},
 		{
-			path: "/services",
-			label: "Services",
+			path: "#projects",
+			label: "Projects ",
 		},
 		{
-			path: "/portfolio",
-			label: "Portfolio ",
-		},
-		{
-			path: "/testimonials",
+			path: "#testimonial",
 			label: "Testimonials",
 		},
 		{
-			path: "/contact-me",
-			label: "Contact Me",
+			path: "#contactUs",
+			label: "Contact Us",
 		},
 	];
 
@@ -41,6 +36,7 @@ function Header() {
 				top: 0,
 				backdropFilter: "blur(5px)",
 				boxShadow: `-1px 1px 20px 0 ${colors.secondary}`,
+				zIndex: 99,
 			}}
 		>
 			<Container>
@@ -52,7 +48,7 @@ function Header() {
 						alignItems: "center",
 					}}
 				>
-					<Link to="/">
+					<a href="#home">
 						<CardMedia
 							component="img"
 							image={Images.logo}
@@ -63,13 +59,13 @@ function Header() {
 								animation: "rotateY 2s linear",
 							}}
 						/>
-					</Link>
+					</a>
 					<Box>
 						{Navigation.map((item, index) => (
 							<Typography
 								key={index}
-								component={Link}
-								to={item.path}
+								component="a"
+								href={item.path}
 								sx={{
 									display: "inline-block",
 									color: [colors.white],

@@ -18,6 +18,25 @@ a {
   text-decoration: none;
 }
 
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  color: #65b7f3;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  color: #65b7f3;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #65b7f3 !important;
+}
+
+
 @keyframes rotateY {
   from {
     transform: rotateY(0deg);

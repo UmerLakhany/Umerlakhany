@@ -15,4 +15,10 @@ export const Images = {
 	node: require("./images/node.png"),
 	mongodb: require("./images/mongodb.png"),
 	angular: require("./images/angular.png"),
+	velvetCoin: require("./images/velvet-coin.png"),
+	galaxy: require("./images/galaxyworldwide.png"),
+	alegar: require("./images/alegar.png"),
+	easyFile: require("./images/easyfile.png"),
+	onomeapoe: require("./images/onomeapoe.jpg"),
+	star: require("./images/fiveStar.png"),
 };
