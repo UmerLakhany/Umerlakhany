@@ -104,13 +104,20 @@ function Home() {
 				<Container>
 					<Grid
 						container
-						sx={{ justifyContent: "space-between", alignItems: "center", py: 4 }}
+						sx={{
+							justifyContent: "space-between",
+							alignItems: "center",
+							py: 4,
+						}}
 					>
-						<Grid item md={6}>
+						<Grid item md={6} xs={12} sx={{ order: { xs: 2, md: 1 } }}>
 							<Typography
 								variant="h1"
 								sx={{
-									fontSize: 32,
+									fontSize: {
+										xs: 26,
+										sm: 32,
+									},
 									color: [colors.white],
 									fontWeight: 700,
 									mb: 2,
@@ -121,7 +128,10 @@ function Home() {
 							<Typography
 								variant="h1"
 								sx={{
-									fontSize: 28,
+									fontSize: {
+										xs: 22,
+										sm: 28,
+									},
 									color: [colors.secondary],
 									fontWeight: 700,
 									mb: 2,
@@ -224,15 +234,22 @@ function Home() {
 								))}
 							</Box>
 						</Grid>
-						<Grid item md={5}>
+						<Grid item md={5} xs={12} sx={{ order: { xs: 1, md: 2 } }}>
 							<CardMedia
 								component="img"
 								image={Images.pic}
 								sx={{
-									width: "70%",
+									width: {
+										xs: "50%",
+										md: "70%",
+									},
 									borderRadius: "50%",
 									mx: "auto",
 									boxShadow: `-1px 1px 20px 0 ${colors.secondary}`,
+									mb: {
+										xs: 6,
+										md: 0,
+									},
 								}}
 							/>
 						</Grid>
@@ -251,7 +268,10 @@ function Home() {
 					<Typography
 						variant="h2"
 						sx={{
-							fontSize: 32,
+							fontSize: {
+								xs: 26,
+								sm: 32,
+							},
 							fontWeight: 600,
 							color: [colors.white],
 							textAlign: "center",
@@ -269,11 +289,17 @@ function Home() {
 						}}
 					>
 						{Skills.map((item, index) => (
-							<Grid item md={2} key={index}>
+							<Grid item md={2} sm={3} xs={6} key={index}>
 								<Box
 									sx={{
-										width: 120,
-										height: 120,
+										width: {
+											md: 100,
+											xs: 80,
+										},
+										height: {
+											md: 100,
+											xs: 80,
+										},
 										mx: "auto",
 										mb: 3,
 										padding: "10px 8px",
@@ -310,7 +336,10 @@ function Home() {
 					<Typography
 						variant="h2"
 						sx={{
-							fontSize: 32,
+							fontSize: {
+								xs: 26,
+								sm: 32,
+							},
 							fontWeight: 600,
 							color: [colors.white],
 							textAlign: "center",
@@ -324,9 +353,15 @@ function Home() {
 						component="p"
 						sx={{
 							color: [colors.white],
-							mx: 10,
+							mx: {
+								xs: 0,
+								md: 10,
+							},
 							textAlign: "center",
-							fontSize: 20,
+							fontSize: {
+								xs: 16,
+								sm: 20,
+							},
 						}}
 					>
 						I have completed many projects in the marketplace and out of marketplace.
@@ -343,21 +378,31 @@ function Home() {
 								flexDirection: index % 2 === 0 ? "row" : "row-reverse",
 							}}
 						>
-							<Grid item md={6}>
+							<Grid item md={6} xs={12}>
 								<CardMedia
 									component="img"
 									image={item.img}
 									sx={{
-										width: "100%",
+										width: {
+											xs: "50%",
+											md: "100%",
+										},
+										mx: "auto",
+										mb: {
+											xs: 4,
+										},
 									}}
 								/>
 							</Grid>
-							<Grid md={5.5}>
+							<Grid md={5.5} xs={12}>
 								<Typography
 									variant="h3"
 									sx={{
 										color: [colors.white],
-										fontSize: 24,
+										fontSize: {
+											xs: 22,
+											sm: 24,
+										},
 										fontWeight: 600,
 										mb: 3,
 									}}
@@ -367,7 +412,10 @@ function Home() {
 								<Typography
 									component="p"
 									sx={{
-										fontSize: 18,
+										fontSize: {
+											xs: 16,
+											sm: 18,
+										},
 										color: [colors.white],
 										mb: 3,
 									}}
@@ -409,7 +457,10 @@ function Home() {
 					<Typography
 						variant="h2"
 						sx={{
-							fontSize: 32,
+							fontSize: {
+								xs: 26,
+								sm: 32,
+							},
 							fontWeight: 600,
 							color: [colors.white],
 							textAlign: "center",
@@ -418,17 +469,6 @@ function Home() {
 						}}
 					>
 						testimonial
-					</Typography>
-					<Typography
-						component="p"
-						sx={{
-							color: [colors.white],
-							textAlign: "center",
-							fontSize: 20,
-							mb: 3,
-						}}
-					>
-						What client say
 					</Typography>
 					<Swiper
 						slidesPerView={1}
@@ -462,7 +502,10 @@ function Home() {
 								<Typography
 									variant="h3"
 									sx={{
-										fontSize: 20,
+										fontSize: {
+											xs: 18,
+											sm: 20,
+										},
 										fontWeight: 600,
 										color: [colors.white],
 										textAlign: "center",
@@ -508,7 +551,10 @@ function Home() {
 					<Typography
 						variant="h2"
 						sx={{
-							fontSize: 32,
+							fontSize: {
+								xs: 26,
+								sm: 32,
+							},
 							fontWeight: 600,
 							color: [colors.white],
 							textAlign: "center",
@@ -577,9 +623,12 @@ function Home() {
 							</Box>
 						))}
 					</Box>
-					<form
-						style={{
-							width: "50%",
+					<Box
+						sx={{
+							width: {
+								xs: "89%",
+								md: "60%",
+							},
 							margin: "40px auto",
 							textAlign: "center",
 						}}
@@ -598,7 +647,7 @@ function Home() {
 								outline: "none",
 								fontSize: "18px",
 								fontStyle: "italic",
-								width: "100%",
+								width: "80%",
 							}}
 						/>
 						<input
@@ -615,7 +664,7 @@ function Home() {
 								outline: "none",
 								fontSize: "18px",
 								fontStyle: "italic",
-								width: "100%",
+								width: "80%",
 							}}
 						/>
 						<textarea
@@ -631,7 +680,7 @@ function Home() {
 								outline: "none",
 								fontSize: "18px",
 								fontStyle: "italic",
-								width: "100%",
+								width: "80%",
 								borderRadius: "10px",
 							}}
 						/>
@@ -655,7 +704,7 @@ function Home() {
 						>
 							Submit
 						</Button>
-					</form>
+					</Box>
 				</Container>
 			</Box>
 		</Fragment>

@@ -17,7 +17,10 @@ function Footer() {
 			<Container>
 				<Box
 					sx={{
-						display: "flex",
+						display: {
+							xs: "block",
+							sm: "flex",
+						},
 						flexDirection: "row",
 						justifyContent: "space-between",
 						alignItems: "center",
@@ -32,6 +35,7 @@ function Footer() {
 								height: 65,
 								objectFit: "fill",
 								animation: "rotateY 2s linear",
+								mx: "auto",
 							}}
 						/>
 					</Link>
@@ -41,6 +45,11 @@ function Footer() {
 							flexDirection: "row",
 							alignItems: "center",
 							gap: "14px",
+							justifyContent: "space-around",
+							my: {
+								xs: 1,
+								sm: 0,
+							},
 						}}
 					>
 						<Box
