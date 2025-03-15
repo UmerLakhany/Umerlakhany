@@ -17,29 +17,29 @@ function Home() {
 			img: Images.velvetCoin,
 			heading: "Ecommerce (REACT JS)",
 			content:
-				"Fazshop is a sleek, responsive e-commerce site with a clean product grid, simple navigation, and smooth animations that enhance the user experience.",
-			path: "#",
+				"VelVet coin is a sleek, responsive e-commerce site with a clean product grid, simple navigation, and smooth animations that enhance the user experience.",
+			path: "https://multi-vendor-ecommerce-app-eosin.vercel.app/",
 		},
 		{
 			img: Images.galaxy,
-			heading: "Ecommerce (REACT JS)",
+			heading: "Ecommerce (Next JS)",
 			content:
-				"Fazshop is a sleek, responsive e-commerce site with a clean product grid, simple navigation, and smooth animations that enhance the user experience.",
-			path: "#",
+				"Galaxy worldwide is a sleek, responsive shipping site with a clean product grid, simple navigation, and smooth animations that enhance the user experience.",
+			path: "https://www.gwwshipping.com/",
 		},
 		{
 			img: Images.alegar,
-			heading: "Ecommerce (REACT JS)",
+			heading: "Ecommerce (HTML CSS)",
 			content:
-				"Fazshop is a sleek, responsive e-commerce site with a clean product grid, simple navigation, and smooth animations that enhance the user experience.",
-			path: "#",
+				"Aleger is a sleek, responsive Digital work flows site with a clean product grid, simple navigation, and smooth animations that enhance the user experience.",
+			path: "https://alegerofficial.com/",
 		},
 		{
 			img: Images.easyFile,
 			heading: "Ecommerce (REACT JS)",
 			content:
-				"Fazshop is a sleek, responsive e-commerce site with a clean product grid, simple navigation, and smooth animations that enhance the user experience.",
-			path: "#",
+				"Easyfile is a sleek, responsive e-commerce site with a clean product grid, simple navigation, and smooth animations that enhance the user experience.",
+			path: "https://easyfilerenamer.com/",
 		},
 	];
 
@@ -90,10 +90,16 @@ function Home() {
 				"great job delivered. with Professionalism of work, Code expertise, Language fluency, and Delivery time. He had no reviews, at first i was skeptical... he said he just joined fiverr, and he proved himself. kudos to you bro. Will work with you again.",
 		},
 		{
-			img: Images.onomeapoe,
-			name: "Onomeapoe (Nigeria)",
+			img: Images.profile2,
+			name: "decklan_dawson (United Kingdom)",
 			content:
-				"great job delivered. with Professionalism of work, Code expertise, Language fluency, and Delivery time. He had no reviews, at first i was skeptical... he said he just joined fiverr, and he proved himself. kudos to you bro. Will work with you again.",
+				"I have worked with Umer several times, he nailed it eveytime. His attention to details are amazing. He understand the idea really quickly and have excellent Domain Expertise in Dashboard Design and Web app Design.",
+		},
+		{
+			img: Images.profile3,
+			name: "josephdavid (United States)",
+			content:
+				"Amazing work by Umer! The Admin Panel dashboard design was clean, professional, and exactly what I needed. Excellent attention to detail and fast delivery.",
 		},
 	];
 
@@ -147,11 +153,12 @@ function Home() {
 									mb: 2,
 								}}
 							>
-								I have years of experience and experts who help me ensure that every
-								project is completed on time and to the highest standard. I know
-								that my clients want effective and flawless websites, so I take the
-								time to understand their needs and deliver work that exceeds their
-								expectations.
+								A full-time freelance website developer with expertise in React.js,
+								Next.js, Angular, Node.js, and more. I specialize in building
+								responsive, high-performance websites and fixing complex bugs to
+								help businesses achieve smooth and efficient digital experiences.
+								With a passion for clean code and modern design, I aim to deliver
+								top-notch solutions that meet your goals.
 							</Typography>
 							<Button
 								component={Link}
@@ -166,10 +173,10 @@ function Home() {
 									padding: "12px 18px",
 									width: 200,
 									mb: 2,
+									border: `2px solid ${colors.secondary}`,
 									"&:hover": {
-										opacity: 0.6,
-										transform: "scale(1.05)",
-										transition: "0.2s",
+										backgroundColor: [colors.white],
+										color: [colors.secondary],
 									},
 								}}
 							>
@@ -407,7 +414,7 @@ function Home() {
 										mb: 3,
 									}}
 								>
-									Ecommerce (REACT JS)
+									{item.heading}
 								</Typography>
 								<Typography
 									component="p"
@@ -420,13 +427,11 @@ function Home() {
 										mb: 3,
 									}}
 								>
-									Fazshop is a sleek, responsive e-commerce site with a clean
-									product grid, simple navigation, and smooth animations that
-									enhance the user experience.
+									{item.content}
 								</Typography>
 								<Typography
 									component={Link}
-									to="https://multi-vendor-ecommerce-app-eosin.vercel.app"
+									to={item.path}
 									target="_blank"
 									sx={{
 										color: [colors.secondary],
@@ -695,10 +700,10 @@ function Home() {
 								padding: "12px 18px",
 								width: 200,
 								mb: 2,
+								border: `2px solid ${colors.secondary}`,
 								"&:hover": {
-									opacity: 0.6,
-									transform: "scale(1.05)",
-									transition: "0.2s",
+									backgroundColor: [colors.white],
+									color: [colors.secondary],
 								},
 							}}
 						>

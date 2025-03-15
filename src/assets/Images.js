@@ -21,4 +21,6 @@ export const Images = {
 	easyFile: require("./images/easyfile.png"),
 	onomeapoe: require("./images/onomeapoe.jpg"),
 	star: require("./images/fiveStar.png"),
+	profile2: require("./images/profile2.jpg"),
+	profile3: require("./images/profile3.jpg"),
 };
