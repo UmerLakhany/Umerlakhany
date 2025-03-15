@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Box, Button, Container, Grid, Typography, CardMedia } from "@mui/material";
 import colors from "../styles/colors";
 import { Images } from "../assets/Images";
@@ -10,6 +10,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
 	const Projects = [
@@ -103,6 +105,13 @@ function Home() {
 		},
 	];
 
+	useEffect(() => {
+		AOS.init({
+			duration: 1000, // animation duration in milliseconds
+			once: true, // whether animation should happen only once
+		});
+	}, []);
+
 	return (
 		<Fragment>
 			{/* ======= Hero Section ======= */}
@@ -116,7 +125,13 @@ function Home() {
 							py: 4,
 						}}
 					>
-						<Grid item md={6} xs={12} sx={{ order: { xs: 2, md: 1 } }}>
+						<Grid
+							data-aos="fade-right"
+							item
+							md={6}
+							xs={12}
+							sx={{ order: { xs: 2, md: 1 } }}
+						>
 							<Typography
 								variant="h1"
 								sx={{
@@ -241,7 +256,13 @@ function Home() {
 								))}
 							</Box>
 						</Grid>
-						<Grid item md={5} xs={12} sx={{ order: { xs: 1, md: 2 } }}>
+						<Grid
+							item
+							md={5}
+							xs={12}
+							sx={{ order: { xs: 1, md: 2 } }}
+							data-aos="fade-left"
+						>
 							<CardMedia
 								component="img"
 								image={Images.pic}
@@ -296,7 +317,7 @@ function Home() {
 						}}
 					>
 						{Skills.map((item, index) => (
-							<Grid item md={2} sm={3} xs={6} key={index}>
+							<Grid item md={2} sm={3} xs={6} key={index} data-aos="zoom-in-up">
 								<Box
 									sx={{
 										width: {
@@ -385,7 +406,7 @@ function Home() {
 								flexDirection: index % 2 === 0 ? "row" : "row-reverse",
 							}}
 						>
-							<Grid item md={6} xs={12}>
+							<Grid item md={6} xs={12} data-aos="zoom-in">
 								<CardMedia
 									component="img"
 									image={item.img}
@@ -401,7 +422,7 @@ function Home() {
 									}}
 								/>
 							</Grid>
-							<Grid md={5.5} xs={12}>
+							<Grid md={5.5} xs={12} data-aos="zoom-in">
 								<Typography
 									variant="h3"
 									sx={{
@@ -493,6 +514,7 @@ function Home() {
 						{Testimonial.map((item, index) => (
 							<SwiperSlide key={index}>
 								<CardMedia
+									data-aos="zoom-in"
 									component="img"
 									image={item.img}
 									sx={{
@@ -505,6 +527,7 @@ function Home() {
 									}}
 								/>
 								<Typography
+									data-aos="zoom-in"
 									variant="h3"
 									sx={{
 										fontSize: {
@@ -520,6 +543,7 @@ function Home() {
 									{item.name}
 								</Typography>
 								<Typography
+									data-aos="zoom-in"
 									component="p"
 									sx={{
 										color: [colors.white],
@@ -531,6 +555,7 @@ function Home() {
 									{item.content}
 								</Typography>
 								<CardMedia
+									data-aos="zoom-in"
 									component="img"
 									image={Images.star}
 									sx={{
@@ -547,6 +572,7 @@ function Home() {
 
 			{/* ======= Contact Us ========= */}
 			<Box
+				data-aos="fade-right"
 				id="contactUs"
 				sx={{
 					pb: 6,
